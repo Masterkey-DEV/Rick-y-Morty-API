@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.elementos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  align-items: center;
+  gap: 12px;
+}
+
+.tarjeta {
+  border: 3px solid black;
+  border-radius: 5px;
+  margin: 0;
+  padding: 12px;
+  transition: scale, translateY, ease-in 250ms;
+  box-shadow: 0px 2px 1px black;
+  background: #fff;
+}
+.tarjeta ul li {
+  list-style-type: none;
+  list-style: none;
+}
+
+.tarjeta img {
+  scale: 16/9;
+  max-width: 100%; /* Ajustar la imagen al ancho de la tarjeta */
+  height: auto; /* Mantener la relación de aspecto original */
+  margin-bottom: 10px;
+}
+
+.tarjeta:hover {
+  transform: scale(1.02);
+  position: relative;
+  z-index: 100;
+  transform: translateY(-8px);
+  box-shadow: 4px 8px 3px black;
+}
+
+.point {
+  width: 10px;
+  height: 10px;
+  background-color: #0f0; /* Color del punto */
+  border-radius: 50%; /* Para hacerlo redondo */
+  display: inline-block;
+  margin-right: 5px; /* Espacio entre puntos */
+  animation: blink infinite alternate;
+}
+
+.red {
+  background-color: #f00;
+}
+
+.gray {
+  background-color: gray;
+}
+
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.page {
+  padding: 10px 20px;
+}
+
+/* Estilos para el botón */
+button {
+  background-color: #7f0686cb; /* Color de fondo cuando se pasa el mouse */
+  color: #fff; /* Color del texto del botón */
+  border: none; /* Borde del botón */
+  padding: 10px 20px; /* Espaciado interno del botón */
+  border-radius: 5px; /* Bordes redondeados del botón */
+  cursor: pointer; /* Cambiar el cursor al pasar el mouse */
+  transition: all 300ms; /* Transición de efectos hover */
+
+  /* Sombra del botón */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo hover del botón */
+button:hover {
+  background-color: #a017a2; /* Color de fondo del botón */
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); /* Sombra aumentada en hover */
+}
+
+footer {
+  background-color: #333; /* Color de fondo del footer */
+  color: #fff; /* Color del texto del footer */
+  padding: 20px; /* Espaciado interno del footer */
+  text-align: center; /* Centrar el contenido del footer */
+  bottom: 0; /* Fijar en la parte inferior */
+  width: 100%; /* Ancho del footer al 100% del viewport */
+  justify-content: center;
+  align-items: center;
+}
+
+.search-container {
+  display: flex;
+  background-color: #f2f2f2;
+  border: 1px solid #dcdcdc;
+  border-radius: 24px;
+  padding: 5px;
+  max-width: 500px;
+  margin: 0 auto;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+/* Estilos para el campo de búsqueda */
+.search-input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  border-radius: 24px;
+  outline: none;
+}
+
+.search-container:focus::placeholder {
+  color: transparent;
+}
+
+select {
+  background-color: #4285f4;
+  border: none;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 24px 24px;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Estilos para el botón de búsqueda en hover */
+select:hover {
+  background-color: #357ae8;
+}
+
+.disable {
+  background: #000;
+  opacity: 0.1;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////*/
